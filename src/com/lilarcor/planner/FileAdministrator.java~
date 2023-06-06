@@ -1,0 +1,198 @@
+package com.lilarcor.planner;
+
+import android.app.*;
+import android.os.*;
+import android.view.*;
+import android.widget.*;
+import android.content.*;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.net.*;
+
+public class FileAdministrator
+{
+
+//============================| Global Variables |=========================
+
+	Context context = null;
+	Activity activity = null;
+	static String privatePath = null;
+	String[] City = null;
+
+	int requestCode = 0;
+	ProgressDialog pDialog = null;
+	TextView recommendText = null;
+	
+//============================| Constructor |==============================
+
+	public FileAdministrator(Context context, Activity activity) {
+		this.context = context;		
+		this.activity = activity;
+		
+		pDialog = new ProgressDialog(activity);
+ 
+		privatePath = new StringBuilder(context.getExternalFilesDir(null).getAbsolutePath()).append("/").toString();
+		City = new String[] { "gs", "dy", "be", "yd", "oc", "es", "jc", "jp", "jc2", "cw", "cj", "cj2" };
+	}
+	
+//============================| Methods |==================================
+/*
+	
+	public boolean isVersionCorrects() {
+		File file = null;
+		FileInputStream fis = null;
+		byte[] tmp = null;
+		String data = null;
+		
+		try {
+			file = new File(privatePath + "LILARCOR");
+				
+			if(!file.exists())
+				return false;		
+			
+			fis = new FileInputStream(file);
+			tmp = new byte[fis.available()];
+	
+			while(fis.read(tmp) != -1); // ???????.
+			
+			fis.close();
+		} catch(IOException e) {
+			Toast.makeText(context, "VersionCheck ERROR", 0).show();
+		}
+		
+		data = new String(tmp, 0, tmp.length);
+		if(data.equals(MainActivity.VERSION)) return true;
+		return false;
+	}
+*/
+//-------------------------------------------------------------------------
+	
+	public void createFiles() {
+		File file = null;
+		FileOutputStream fos = null;
+		try { 
+			file = new File(privatePath, "LILARCOR");
+			fos = new FileOutputStream(file);
+			fos.write(new String(MainActivity.VERSION).getBytes());
+			fos.close();
+		} catch(IOException e) {
+			Toast.makeText(context, "First CreateFiles ERROR", 0).show();
+		}
+		
+		
+		try { 
+			for(int i = 0; i < City.length; i++) {
+				file = new File(privatePath, City[i]);
+				fos = new FileOutputStream(file);
+				fos.write(new String("").getBytes());
+				fos.close();
+			}
+		} catch(IOException e) {
+			Toast.makeText(context, "Second CreateFiles ERROR", 0).show();
+		}
+		
+		
+		try { 
+			file = new File(privatePath, "tendency");
+			fos = new FileOutputStream(file);
+			fos.write(new String("").getBytes());
+			fos.close();
+		} catch(IOException e) {
+			Toast.makeText(context, "Third CreateFiles ERROR", 0).show();
+		}
+		return;
+	}
+	
+//-------------------------------------------------------------------------
+
+	public void setTendency(int food) {
+		File file = null;
+		FileOutputStream fos = null;
+		try {
+			file = new File(privatePath, "tendency");
+			fos = new FileOutputStream(file);
+			fos.write(new StringBuilder("").append(food).append(';').toString().getBytes());
+			fos.close();
+		} catch(IOException e) {
+			Toast.makeText(context, "setTendency ERROR", 0).show();
+		}
+		return;
+	}
+	
+//-------------------------------------------------------------------------
+
+	public void getTreasure(TextView tView, int Request) {
+		recommendText = tView;
+		requestCode = Request;
+		
+		pDialog.setMessage("Page Loading...");                  
+		pDialog.show();    
+
+		myThread.setDaemon(true);
+		myThread.start();
+
+	}
+	
+	public static void writeLog(String s) {
+		File file = null;
+		FileOutputStream fos = null;
+		try {
+			file = new File(FileAdministrator.privatePath, "ERROR_LOG");
+			fos = new FileOutputStream(file, true);
+			
+			fos.write((s + "\n").getBytes());
+			fos.close();		
+		} catch(Exception e) {
+			FileAdministrator.writeLog(e.toString());
+		}
+		return;
+	}
+	
+	Thread myThread = new Thread() {	
+		String URLString = "http://m.cafe.naver.com/ArticleRead.nhn?clubid=26327119&articleid=";
+		public void run() {
+			try {
+				InputStream inputStream = new URL(URLString + requestCode).openStream();
+				InputStreamReader isr = new InputStreamReader(inputStream, "UTF-8");
+				BufferedReader br = new BufferedReader(isr);
+				
+				String line = null;
+				String longestString = null;
+				int longestLength = 0;
+
+				while((line = br.readLine())  != null) {
+					if(longestLength < line.length()) {
+						longestLength = line.length();
+						longestString = line;
+					}
+				}
+				
+				Message msg = myHandler.obtainMessage(0, longestString);
+				
+				myHandler.sendMessage(msg);
+
+			} catch (Exception e) {
+				FileAdministrator.writeLog(e.toString());
+			}
+		}
+	};
+	
+	Handler myHandler = new Handler() {
+		public void handleMessage(Message msg) {	
+			switch(msg.what) {
+				case 0:
+					recommendText.setText(msg.obj.toString());
+					pDialog.dismiss();
+					pDialog = null;
+					break;
+				default:
+					break;
+			}
+		}
+	};
+}
+  
+	
+//-------------------------------------------------------------------------
+

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" >
+		
+	<ImageView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:src="@drawable/today_recommend" />
+		
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="#f0f0f0" />	
+		
+	<HorizontalScrollView
+		android:id="@+id/tab0hscroll00"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" >
+		
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal" >
+		
+			<Button
+				android:id="@+id/tab0button00"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="청주"
+				android:background="#00000000" />
+			<TextView
+				android:layout_width="1dp"
+				android:layout_height="fill_parent"
+				android:background="#f0f0f0" />	
+			<Button
+				android:id="@+id/tab0button01"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="청원"
+				android:background="#00000000" />	
+			<TextView
+				android:layout_width="1dp"
+				android:layout_height="fill_parent"
+				android:background="#f0f0f0" />	
+			<Button
+				android:id="@+id/tab0button02"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="진천"
+				android:background="#00000000" />
+			<TextView
+				android:layout_width="1dp"
+				android:layout_height="fill_parent"
+				android:background="#f0f0f0" />	
+			<Button
+				android:id="@+id/tab0button03"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="증평"
+				android:background="#00000000" />
+			<TextView
+				android:layout_width="1dp"
+				android:layout_height="fill_parent"
+				android:background="#f0f0f0" />		
+			<Button
+				android:id="@+id/tab0button04"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="음성"
+				android:background="#00000000" />
+			<TextView
+				android:layout_width="1dp"
+				android:layout_height="fill_parent"
+				android:background="#f0f0f0" />		
+			<Button
+				android:id="@+id/tab0button05"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="충주"
+				android:background="#00000000" />
+			<TextView
+				android:layout_width="1dp"
+				android:layout_height="fill_parent"
+				android:background="#f0f0f0" />		
+			<Button
+				android:id="@+id/tab0button06"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="괴산"
+				android:background="#00000000" />
+			<TextView
+				android:layout_width="1dp"
+				android:layout_height="fill_parent"
+				android:background="#f0f0f0" />		
+			<Button
+				android:id="@+id/tab0button07"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="제천"
+				android:background="#00000000" />
+			<TextView
+				android:layout_width="1dp"
+				android:layout_height="fill_parent"
+				android:background="#f0f0f0" />		
+			<Button
+				android:id="@+id/tab0button08"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="단양"
+				android:background="#00000000" />
+			<TextView
+				android:layout_width="1dp"
+				android:layout_height="fill_parent"
+				android:background="#f0f0f0" />		
+			<Button
+				android:id="@+id/tab0button09"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="옥천"
+				android:background="#00000000" />
+			<TextView
+				android:layout_width="1dp"
+				android:layout_height="fill_parent"
+				android:background="#f0f0f0" />		
+			<Button
+				android:id="@+id/tab0button10"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="영동"
+				android:background="#00000000" />
+			<TextView
+				android:layout_width="1dp"
+				android:layout_height="fill_parent"
+				android:background="#f0f0f0" />		
+			<Button
+				android:id="@+id/tab0button11"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="보은"
+				android:background="#00000000" />
+				
+		</LinearLayout>
+	</HorizontalScrollView>
+	
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="#f0f0f0" />	
+		
+	<FrameLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"	>
+		
+		<TextView
+			android:id="@+id/tab0text00"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right|bottom"
+			android:gravity="right|bottom"
+			android:paddingRight="5dp"
+			android:paddingBottom="5dp"
+			android:textSize="20sp" />
+			
+		<ImageButton
+			android:id="@+id/tab0imagebutton00"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:src="@drawable/terrain_nothing"
+			android:adjustViewBounds="true"
+			android:scaleType="fitXY"	/>
+	
+	</FrameLayout>
+
+</LinearLayout>

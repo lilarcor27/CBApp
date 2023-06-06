@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" >
+	
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
+			android:scaleType="fitXY"
+			android:src="@drawable/today_recommend" />
+		
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:paddingBottom="3dp"
+			android:background="#cbd4cf" />
+		
+		<HorizontalScrollView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" >		
+			
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="horizontal" >
+			
+			<FrameLayout
+				android:layout_width="250dp"
+				android:layout_height="fill_parent" 
+				android:padding="10dp" >
+				
+				<Button
+					android:id="@+id/recommendbutton00"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" />
+				
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:orientation="vertical"
+					android:padding="10dp" >
+				
+					<TextView
+						android:id="@+id/recommendtext00"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:paddingTop="10dp"
+						android:textSize="30sp" />
+						
+					<ImageView
+						android:id="@+id/recommendimage00"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content" />
+						
+					<TextView
+						android:id="@+id/recommendtext00_1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:textSize="15sp" />
+					
+				</LinearLayout>
+			</FrameLayout>
+			
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:src="@drawable/direction_right" />	
+				
+			<FrameLayout
+				android:layout_width="250dp"
+				android:layout_height="fill_parent" 
+				android:padding="10dp" >
+				
+				<Button
+					android:id="@+id/recommendbutton01"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" />
+				
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:orientation="vertical"
+					android:padding="10dp" >
+					
+					<TextView
+						android:id="@+id/recommendtext01"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:paddingTop="10dp"
+						android:textSize="30sp" />
+						
+					<ImageView
+						android:id="@+id/recommendimage01"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content" />
+						
+					<TextView
+						android:id="@+id/recommendtext01_1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:textSize="15sp" />
+				</LinearLayout>
+			</FrameLayout>
+			
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:src="@drawable/direction_right" />
+			
+			<FrameLayout
+				android:layout_width="250dp"
+				android:layout_height="fill_parent" 
+				android:padding="10dp" >
+				
+				<Button
+					android:id="@+id/recommendbutton02"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" />
+				
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:orientation="vertical"
+					android:padding="10dp" >
+				
+					<TextView
+						android:id="@+id/recommendtext02"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:paddingTop="10dp"
+						android:textSize="30sp" />
+						
+					<ImageView
+						android:id="@+id/recommendimage02"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content" />
+						
+					<TextView
+						android:id="@+id/recommendtext02_1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:textSize="15sp" />
+				</LinearLayout>
+			</FrameLayout>
+		</LinearLayout>
+	</HorizontalScrollView>
+</LinearLayout>

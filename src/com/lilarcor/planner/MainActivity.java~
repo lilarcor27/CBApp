@@ -48,7 +48,7 @@ public class MainActivity extends TabActivity
         super.onCreate(savedInstanceState); // 슈퍼클래스의 생성자를 호출합니다.
 	    setContentView(R.layout.main); // main.xml 의 내용을 불러옵니다.
 		setLogAvailable(); // 로그를 사용 가능하게 합니다.
-		setRandomCityKey(); // 시티 키를 랜덤하게 셋팅합니다.
+//		setRandomCityKey(); // 시티 키를 랜덤하게 셋팅합니다.
 //		setEachKeys(); // 도시 세 개를 직접 셋팅합니다.
 		
 		checkNetwork(false); // 네트워크 연결을 확인하고, 재연결을 시도하며 연결되지 않았을 시 그대로 갑니다. 인자는 aDialog 생성 여부

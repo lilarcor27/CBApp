@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, MainActivity!</string>
-    <string name="app_name">충청북도 여행 플래너</string>
+    <string name="app_name">CBApp2</string>
 	<string name="menu_settings">Settings</string>
 	<string name="title_activity_main">TitleActivityMain</string>
 

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"	
+	android:background="#f0f0f0">
+	
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="시/군청 홈페이지 바로가기"
+		android:textSize="25sp"
+		android:textColor="#40a940"	/>
+	
+	<TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"	>
+		
+		<TableRow>
+			<Button
+				android:id="@+id/tab2button00"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="청주" />
+
+			<Button
+				android:id="@+id/tab2button01"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="청원" />
+			<Button
+				android:id="@+id/tab2button02"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="진천"	/>
+
+			<Button
+				android:id="@+id/tab2button03"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="증평"	/>
+		</TableRow>
+		
+		<TableRow>
+			<Button
+				android:id="@+id/tab2button04"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="음성"	/>
+	
+			<Button
+				android:id="@+id/tab2button05"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="충주"	/>
+	
+			<Button
+				android:id="@+id/tab2button06"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="괴산"	/>
+	
+			<Button
+				android:id="@+id/tab2button07"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="제천"	/>
+		</TableRow>
+		
+		<TableRow>
+			<Button
+				android:id="@+id/tab2button08"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="단양"	/>
+	
+			<Button
+				android:id="@+id/tab2button09"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="옥천"	/>
+	
+			<Button
+				android:id="@+id/tab2button10"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="영동"	/>
+	
+			<Button
+				android:id="@+id/tab2button11"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="보은"	/>
+		</TableRow>
+	</TableLayout>		
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/summary_divider"	/>		
+
+	<TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"	>
+		<TableRow>
+			<Button
+				android:id="@+id/tab2button12"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="4"
+				android:layout_gravity="center"
+				android:textSize="17sp"
+				android:textColor="#40a940"
+				android:background="#00000000"
+				android:text="'충북 나드리' 바로가기"	/>	
+				
+			<ImageButton
+				android:id="@+id/tab2imagebutton00"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:src="@drawable/direction_right"
+				android:background="#00000000"	/>
+		</TableRow>
+	</TableLayout>
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/summary_divider"	/>		
+		
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:gravity="bottom|center"
+		android:paddingBottom="5dp"
+		android:textSize="15sp"
+		android:textColor="#147814"
+		android:text="제 2회 충청북도 모바일 앱 공모전 출품작" />
+		
+</LinearLayout>
